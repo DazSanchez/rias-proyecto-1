@@ -1,0 +1,33 @@
+:root {
+  --primary: #084d68;
+  --secondary: #69c181;
+  --primary-light: #0d7685;
+  --danger: #960200;
+  --warning: #ffa630;
+  --bg-color: #eeeeee;
+}
+
+body {
+  background-color: var(--bg-color);
+  min-height: 100vh;
+}
+
+.header {
+  background-color: var(--primary);
+}
+
+.header__container {
+  width: 100%;
+  max-width: 960px;
+}
+
+.logo {
+  --size: 64px;
+  display: inline-block;
+  height: var(--size);
+  width: var(--size);
+}
+
+.footer {
+  margin-top: auto;
+}
