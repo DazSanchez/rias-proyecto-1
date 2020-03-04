@@ -6,9 +6,9 @@
     <title>
       FreeMarket
     </title>
-    <link rel="stylesheet" href="/assets/css/line-awesome.min.css" />
-    <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="/assets/css/index.css?cb=<?= time()?>" />
+    <link rel="stylesheet" href="../../assets/css/line-awesome.min.css" />
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../../assets/css/index.css?cb=<?= time()?>" />
   </head>
   <body class="d-flex flex-column">
     <header
@@ -17,18 +17,27 @@
       <div
         class="header__container d-flex justify-content-between align-items-center"
       >
-        <a href="/pages/home.html">
-          <img class="logo" src="/assets/img/logo.png" alt="FreeMarket logo" />
+        <a href="../../pages/home.html">
+          <img
+            class="logo"
+            src="../../assets/img/logo.png"
+            alt="FreeMarket logo"
+          />
         </a>
         <nav class="menu d-flex align-items-center">
           <span class="text-white mr-3 d-none">
             Bienvenido, <span id="username"></span>
           </span>
-          <a class="text-white mr-3" href="/pages/auth/create_account.html">
+          <a
+            class="text-white mr-3"
+            href="../../pages/auth/create_account.html"
+          >
             Crear cuenta
           </a>
-          <a class="text-white mr-3" href="/pages/auth/login.html">Ingresar</a>
-          <a href="/pages/client/my_cart.html">
+          <a class="text-white mr-3" href="../../pages/auth/login.html"
+            >Ingresar</a
+          >
+          <a href="../../pages/client/my_cart.html">
             <i class="text-white la la-shopping-cart la-lg"></i>
             <span class="badge badge-danger d-none">
               2
@@ -49,7 +58,7 @@
         FreeMarket &copy; 2020.
       </p>
     </footer>
-    <script src="/assets/js/helpers.js"></script>
-    <script src="/assets/js/my-cart.js"></script>
+    <script src="../../assets/js/helpers.js"></script>
+    <script src="../../assets/js/my-cart.js"></script>
   </body>
 </html>
