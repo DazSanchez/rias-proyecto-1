@@ -6,9 +6,9 @@
     <title>
       FreeMarket
     </title>
-    <link rel="stylesheet" href="/assets/css/line-awesome.min.css" />
-    <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="/assets/css/index.css?cb=<?= time()?>" />
+    <link rel="stylesheet" href="../../assets/css/line-awesome.min.css" />
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../../assets/css/index.css?cb=<?= time()?>" />
   </head>
   <body class="d-flex flex-column">
     <header
@@ -17,8 +17,12 @@
       <div
         class="header__container d-flex justify-content-between align-items-center"
       >
-        <a href="/pages/home.html">
-          <img class="logo" src="/assets/img/logo.png" alt="FreeMarket logo" />
+        <a href="../../pages/home.html">
+          <img
+            class="logo"
+            src="../../assets/img/logo.png"
+            alt="FreeMarket logo"
+          />
         </a>
         <nav class="menu d-flex align-items-center">
           <span class="text-white mr-3 d-none">
@@ -29,17 +33,141 @@
     </header>
 
     <main class="main bg-white container">
-      <h1>Creacion de producto</h1>
+      <div class="section d-flex flex-row justify-content-between">
+        <button class="btn"><i class="la la-angle-left"></i> Anterior</button>
+        <button
+          type="button"
+          class="btn button-primary d-flex flex-row justify-content-center align-items-center"
+        >
+          <i class="la la-save la-2x"></i>
+          Crear
+        </button>
+      </div>
+
+      <form action="" class="p-2">
+        <h1 class="h5 col-auto">Crear un producto</h1>
+        <div
+          class="section d-flex flex-column flex-md-row col-12 justify-content-around" 
+        >
+          <div class="section d-flex flex-column col-auto col-md-4 col-lg-3">
+            <div
+              class="image-product d-flex flex-row justify-content-center align-items-center"
+            >
+              <button type="button" class="btn">
+                <i class="la la-camera la-4x"></i>
+              </button>
+            </div>
+
+            <div class="section form-group col-auto col-md-4>
+              <h6 class="h6">Existencia</h6>
+              <input
+                class="form-control"
+                type="text"
+                name="existencia"
+                id="existencia"
+                placeholder="Total"
+                required
+              />
+            </div>
+          </div>
+          <div class="section d-flex flex-wrap col-auto col-md-8 col-lg-9">
+            <div class="form-group col-12">
+              <input
+                type="text"
+                class="form-control"
+                id="model"
+                name="model"
+                placeholder="Modelo"
+                required
+              />
+            </div>
+            <div class="form-group col-12">
+              <textarea
+                class="form-control"
+                name="description"
+                id="description"
+                placeholder="Descripcion"
+                cols="30"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+            
+            <div class=" d-flex flex-wrap align-items-end">
+              <div class="form-group col-12 col-md-3 col-lg-2">
+                <h6 class="h6 col-12">Medidas</h6>
+                <input
+                  class="form-control"
+                  type="text"
+                  name="alto"
+                  id="alto"
+                  placeholder="Alto"
+                  required
+                />
+              </div>
+              <div class="form-group col-12 col-md-3 col-lg-2">
+                <input
+                  class="form-control"
+                  type="text"
+                  name="ancho"
+                  id="ancho"
+                  placeholder="Ancho"
+                  required
+                />
+              </div>
+              <div class="form-group col-12 col-md-3 col-lg-2">
+                <input
+                  class="form-control"
+                  type="text"
+                  name="largo"
+                  id="largo"
+                  placeholder="Largo"
+                  required
+                />
+              </div>
+              <div class="form-group col-12 col-md-3 col-lg-2">
+                <input
+                  class="form-control"
+                  type="text"
+                  name="peso"
+                  id="peso"
+                  placeholder="Peso"
+                  required
+                />
+              </div>
+              <div class="form-group col-12 col-md-4 col-lg-2">
+                <h6 class="h6">Tipo mueble</h6>
+                <select class="form-control" name="tipo_mueble" id="" required>
+                  <option value="0">-Opciones-</option></select
+                >
+              </div>
+              <div class="form-group  col-12 col-md-4 col-lg-2">
+                <h6 class="h6">Estilo</h6>
+                <select class="form-control" name="tipo_mueble" id="" required>
+                  <option value="0">-Opciones-</option></select
+                >
+              </div>
+            </div>
+
+            <div class="form-group  col-12 col-md-4">
+              <h6 class="h6">Material</h6>
+              <select class="form-control" name="tipo_mueble" id="" required>
+                <option value="0">-Opciones-</option></select
+              >
+            </div>
+          </div>
+        </div>
+      </form>
     </main>
 
     <footer
       class="footer d-flex justify-content-center align-items center container"
     >
       <p class="text-muted text-center my-2">
-        FreeMarket &copy; 2020.
+        Todos los derechos reservados. FreeMarket &copy; 2020.
       </p>
     </footer>
-    <script src="/assets/js/helpers.js"></script>
-    <script src="/assets/js/create-product.js"></script>
+    <script src="../../assets/js/helpers.js"></script>
+    <script src="../../assets/js/create-product.js"></script>
   </body>
 </html>

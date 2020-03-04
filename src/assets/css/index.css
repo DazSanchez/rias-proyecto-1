@@ -31,3 +31,41 @@ body {
 .footer {
   margin-top: auto;
 }
+<<<<<<< Updated upstream
+=======
+
+.banner-home {
+  height: 500px;
+  max-height: 535px;
+  background-image: url("../img/bg.jpg");
+  background-size: contain;
+  background-repeat: round;
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.button-primary {
+  background-color: var(--primary);
+  color: #ffff;
+}
+
+.product {
+  border: 0.5px solid #000000;
+  padding: 10px;
+  margin: 5px;
+}
+
+.image-product {
+  width: 180px;
+  height: 180px;
+  border: 1px dashed #000000;
+  padding: 10px;
+  margin: 5px 0;
+}
+
+.section {
+  margin: 10px 0px;
+}
+>>>>>>> Stashed changes
