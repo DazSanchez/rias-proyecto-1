@@ -1,5 +1,5 @@
 <?php 
-    include_once("../utils/mysql_helper.php");
+    include_once("../helpers/mysql_helper.php");
 
     class Producto {
         private $pdo;
@@ -9,10 +9,16 @@
         }
         
         function obtener_productos($filtro) {
-            $query = $this->pdo->prepare("SELECT * FROM MUEBLE WHERE ? = ?", [
-                $filtro["tipo"],
-                $filtro["q"]
-            ]);
+
+            $sql = "SELECT DESCRIPCION as title, PRECIO as price, IMG_URL as url FROM MUEBLE ";
+
+            if($filtro["filter"] == 1) {
+                $sql = $sql."WHERE ID_TIPO = {$filtro["q"]}";
+            } else {
+                $sql = $sql."WHERE ID_ESTILO = {$filtro["q"]}";
+            }
+
+            $query = $this->pdo->prepare($sql);
 
             $query->execute();
 

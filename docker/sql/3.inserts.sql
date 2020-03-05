@@ -46,3 +46,20 @@ VALUES ('admin', '1c7a92ae351d4e21ebdfb897508f59d6', 2);
 -- Cliente
 INSERT INTO muebleria_db.CLIENTES (NOMBRE ,PRIMER_APELLIDO ,SEGUNDO_APELLIDO ,TEL_OFICINA,EMAIL ,DIRECCION_FISCAL ,ID_USUARIO ,ID_TIENDA )
 VALUES('Daniela', 'Rosales','Lopez', '712345','drosales@mediomelon.mx','Col. Centro, Av 2, Orizaba, Veracruz',2,1);
+
+-- Medidas
+INSERT INTO muebleria_db.MEDIDA_MUEBLE
+VALUES 
+    (1,30,40,30,10),
+    (2,15,10,5,5),
+    (5,100,10,10,50),
+    (6,50,10,10,10),
+    (7,5,5,5,5);
+
+-- Muebles
+INSERT INTO muebleria_db.MUEBLE VALUES
+    (1,'Central Colonial', 11500,'Mesa de centro colonial',1,2,3,7,1,1,'/tmp/mesa-colonial-1.webp'),
+    (2,'Central Contemporanea', 5500,'Mesa de centro',1,2,2,2,1,3,'/tmp/mesa-contemporanea-1.webp'),
+    (3,'Cantinera', 950,'Silla estilo Cantina antigua',1,3,1,6,3,1,'/tmp/silla-reproduccion-1.jpg'),
+    (4, 'TabArt', 5000, 'Taburete estilo Art Noveu', 1,4,4,1,1,2,'/tmp/taburete-artnoveu.jpg'),
+    (5, 'SillCol',1828,'Sillón de Madera Colonial con tapicería azul',1,1,3,5,1,1,'/tmp/sillon-colonial-1.webp');

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es-MX">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -23,253 +23,96 @@
           />
         </a>
         <nav class="menu d-flex align-items-center">
-          <span class="text-white mr-3 d-none">
+          <span id="username-display" class="text-white mr-3 d-none">
             Bienvenido, <span id="username"></span>
           </span>
-          <a class="text-white mr-3" href="auth/register.html">
-            Crear cuenta
+          <a id="admin-add" class="btn btn-outline-secondary d-none mr-2" href="admin/create_product.html">
+            <i class="la la-plus"></i>
+            Agregar producto
           </a>
-          <a class="text-white mr-3" href="auth/login.html">Ingresar</a>
-          <a href="client/my_cart.html">
-            <i class="text-white la la-shopping-cart la-lg"></i>
-            <span class="badge badge-danger d-none">
-              2
-            </span>
-          </a>
+          <button id="logout-btn" class="btn btn-outline-secondary d-none">
+            Salir
+          </button>
+          <div id="access-links">
+            <a class="text-white mr-3" href="auth/register.html">
+              Crear cuenta
+            </a>
+            <a class="text-white mr-3" href="auth/login.html">Ingresar</a>
+          </div>
         </nav>
       </div>
     </header>
 
-    <main class="main bg-white container">
-      <div class="d-flex justify-content-center align-items-center banner-home">
-        <div
-          class="d-flex flex-column justify-content-center align-items-center"
-        >
-          <p class="text-white d-flex flex-column">
-            <span>
-              Es momento de redecorar tu casa
-            </span>
-            <span>
-              ¡Llev&aacute;telo antes de que se acabe!
-            </span>
+    <main class="main bg-white">
+      <div
+        class="d-flex flex-column justify-content-center align-items-center banner-home"
+      >
+        <div class="banner-content text-white container text-center">
+          <h1 class="h2">
+            Es momento de redecorar tu casa
+          </h1>
+          <p>
+            ¡Llev&aacute;telo antes de que se acabe!
           </p>
-          <button type="button" class="btn button-primary">
-            Mu&eacute;strame las ofertas
+          <button class="btn btn-outline-secondary btn-banner" id="call-to-action">
+            <span>¡Mu&eacute;strame las ofertas!</span>
+            <i class="la la-angle-down btn-banner-icon"></i>
           </button>
         </div>
       </div>
 
-      <section
-        class="d-flex flex-row justify-content-end align-items-end section"
-      >
-        <form action="">
-          <label>Filtrar por: </label>
-          <select class="form-control" name="style" id="">
-            <option value="0">Estilo</option>
-            <option value="1">Tipo</option>
-          </select>
-
-          <select class="form-control" name="reproductions" id="">
-            <option value="0">Reproducciones</option>
-            <option value="1">Coloniales</option>
-            <option value="2">Art Noveu</option>
-          </select>
-
-          <select class="form-control" name="furniture" id="">
-            <option value="0">Sillones</option>
-            <option value="1">Mesas</option>
-            <option value="2">Taburetes</option>
-            <option value="3">Escritorios</option>
-          </select>
-        </form>
+      <section id="catalog">
+        <header class="filters bg-light py-2">
+          <div
+            class="container d-flex justify-content-between align-items-center"
+          >
+            <p class="font-weight-bold m-0">Filtrar por:</p>
+            <button class="btn" id="toggle-filters">
+              <i class="la la-filter la-lg"></i>
+            </button>
+          </div>
+        </header>
+          <form id="filter-form" class="container mt-2 filter-form">
+            <div class="row">
+              <div class="form-group col-sm">
+                <select class="form-control" id="kind-filter">
+                  <option value="1">Tipo</option>
+                  <option value="2">Estilo</option>
+                </select>
+              </div>
+    
+              <div class="form-group col-sm d-none">
+                <select class="form-control" id="style-filter">
+                  <option value="1">Reproducciones</option>
+                  <option value="2">Contempor&aacute;neos</option>
+                  <option value="3">Coloniales</option>
+                  <option value="4">Art Noveu</option>
+                </select>
+              </div>
+    
+              <div class="form-group col-sm">
+                <select class="form-control" id="type-filter">
+                  <option value="1">Sillones</option>
+                  <option value="2">Mesas</option>
+                  <option value="3">Sillas</option>
+                  <option value="4">Taburetes</option>
+                  <option value="5">Escritorios</option>
+                </select>
+              </div>
+            </div>
+          </form>
       </section>
 
-      <section class="d-flex flex-column section">
-        <h3>Cat&aacute;logo de productos</h3>
-        <div class="d-flex flex-wrap justify-content-center align-items-center">
-          <div class="product col-auto col-md-2 col-md-2 d-flex flex-column">
-            <img
-              src="https://picsum.photos/200/200"
-              class="card-img-top"
-              alt="..."
-              height="200px"
-            />
-            <hr />
-            <span>$NNNN</span>
-            <span>12 x $NNNN</span>
-          </div>
-          <div class="product col-auto col-md-2 col-md-2 d-flex flex-column">
-            <img
-              src="https://picsum.photos/200/200"
-              class="card-img-top"
-              alt="..."
-              width="200px"
-              height="200px"
-            />
-            <hr />
-            <span>$NNNN</span>
-            <span>12 x $NNNN</span>
-          </div>
-          <div class="product col-auto col-md-2 col-md-2 d-flex flex-column">
-            <img
-              src="https://picsum.photos/200/200"
-              class="card-img-top"
-              alt="..."
-              height="200px"
-              width="200px"
-            />
-            <hr />
-            <span>$NNNN</span>
-            <span>12 x $NNNN</span>
-          </div>
-          <div class="product col-auto col-md-2 col-md-2 d-flex flex-column">
-            <img
-              src="https://picsum.photos/200/200"
-              class="card-img-top"
-              alt="..."
-              height="200px"
-              width="200px"
-            />
-            <hr />
-            <span>$NNNN</span>
-            <span>12 x $NNNN</span>
-          </div>
-          <div class="product col-auto col-md-2 col-md-2 d-flex flex-column">
-            <img
-              src="https://picsum.photos/200/200"
-              class="card-img-top"
-              alt="..."
-              height="200px"
-              width="200px"
-            />
-            <hr />
-            <span>$NNNN</span>
-            <span>12 x $NNNN</span>
-          </div>
-          <div class="product col-auto col-md-2 d-flex flex-column">
-            <img
-              src="https://picsum.photos/200/200"
-              class="card-img-top"
-              alt="..."
-              height="200px"
-            />
-            <hr />
-            <span>$NNNN</span>
-            <span>12 x $NNNN</span>
-          </div>
-          <div class="product col-auto col-md-2 d-flex flex-column">
-            <img
-              src="https://picsum.photos/200/200"
-              class="card-img-top"
-              alt="..."
-              width="200px"
-              height="200px"
-            />
-            <hr />
-            <span>$NNNN</span>
-            <span>12 x $NNNN</span>
-          </div>
-          <div class="product col-auto col-md-2 d-flex flex-column">
-            <img
-              src="https://picsum.photos/200/200"
-              class="card-img-top"
-              alt="..."
-              height="200px"
-              width="200px"
-            />
-            <hr />
-            <span>$NNNN</span>
-            <span>12 x $NNNN</span>
-          </div>
-          <div class="product col-auto col-md-2 d-flex flex-column">
-            <img
-              src="https://picsum.photos/200/200"
-              class="card-img-top"
-              alt="..."
-              height="200px"
-              width="200px"
-            />
-            <hr />
-            <span>$NNNN</span>
-            <span>12 x $NNNN</span>
-          </div>
-          <div class="product col-auto col-md-2 d-flex flex-column">
-            <img
-              src="https://picsum.photos/200/200"
-              class="card-img-top"
-              alt="..."
-              height="200px"
-              width="200px"
-            />
-            <hr />
-            <span>$NNNN</span>
-            <span>12 x $NNNN</span>
-          </div>
-          <div class="product col-auto col-md-2 d-flex flex-column">
-            <img
-              src="https://picsum.photos/200/200"
-              class="card-img-top"
-              alt="..."
-              height="200px"
-            />
-            <hr />
-            <span>$NNNN</span>
-            <span>12 x $NNNN</span>
-          </div>
-          <div class="product col-auto col-md-2 d-flex flex-column">
-            <img
-              src="https://picsum.photos/200/200"
-              class="card-img-top"
-              alt="..."
-              width="200px"
-              height="200px"
-            />
-            <hr />
-            <span>$NNNN</span>
-            <span>12 x $NNNN</span>
-          </div>
-          <div class="product col-auto col-md-2 d-flex flex-column">
-            <img
-              src="https://picsum.photos/200/200"
-              class="card-img-top"
-              alt="..."
-              height="200px"
-              width="200px"
-            />
-            <hr />
-            <span>$NNNN</span>
-            <span>12 x $NNNN</span>
-          </div>
-          <div class="product col-auto col-md-2 d-flex flex-column">
-            <img
-              src="https://picsum.photos/200/200"
-              class="card-img-top"
-              alt="..."
-              height="200px"
-              width="200px"
-            />
-            <hr />
-            <span>$NNNN</span>
-            <span>12 x $NNNN</span>
-          </div>
-          <div class="product col-auto col-md-2 d-flex flex-column">
-            <img
-              src="https://picsum.photos/200/200"
-              class="card-img-top"
-              alt="..."
-              height="200px"
-              width="200px"
-            />
-            <hr />
-            <span>$NNNN</span>
-            <span>12 x $NNNN</span>
+      <section class="d-flex flex-column container">
+        <h4>Cat&aacute;logo de productos</h4>
+        <div id="loader" class="d-none">
+          <div class="loader">
+            Cargando...
           </div>
         </div>
+        <div id="catalog-results" class="row"></div>
+        </div>
       </section>
-      <div class="section d-flex flex-row justify-content-between">
-        <button class="btn"><i class="la la-angle-left"></i> Anterior</button>
-        <button class="btn">Siguiente <i class="la la-angle-right"></i></button>
-      </div>
     </main>
 
     <footer

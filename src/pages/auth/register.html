@@ -29,7 +29,7 @@
       <div class="container">
         <div class="row justify-content-center align-items-center mt-4 mb-4">
           <div class="col-10 col-sm-10 col-md-9 col-lg-7 col-xl-6 bg-white">
-            <form action="" class="p-2">
+            <form method="POST" action="" class="p-2">
               <h4 class="h4 text-center">Registro de Cliente</h4>
               <div class="form-row">
                 <div class="form-group col-12">
@@ -43,6 +43,8 @@
                     name="RFC"
                     placeholder="RFC (Requerido)"
                     required
+                    pattern="^([A-ZÑ&]{3,4}) ?(?:- ?)?(\d{2}(?:0[1-9]|1[0-2])(?:0[1-9]|[12]\d|3[01])) ?(?:- ?)?([A-Z\d]{2})([A\d])$"
+                    title="No es un formato de RFC v&aacute;lido"
                   />
                 </div>
                 <div class="form-group col-12 col-md-6">
@@ -101,20 +103,26 @@
                 <div class="form-group col-12 col-md-6">
                   <input
                     class="form-control"
-                    type="number"
+                    type="text"
                     name="Telefono_oficina"
                     id="Tel_oficina"
                     placeholder="Telefono de oficina (Requerido)"
                     required
+                    pattern="\d{10}"
+                    title="Escriba los 10 d&iacute;gitos del número telef&oacute;nico"
+                    maxlength="10"
                   />
                 </div>
                 <div class="form-group col-12 col-md-6">
                   <input
                     class="form-control"
-                    type="number"
+                    type="text"
                     name="Telefono_celular"
                     id="Tel_celular"
                     placeholder="Telefono celular (Opcional)"
+                    pattern="\d{10}"
+                    title="Escriba los 10 d&iacute;gitos del número telef&oacute;nico"
+                    maxlength="10"
                   />
                 </div>
                 <div class="form-group col-12">

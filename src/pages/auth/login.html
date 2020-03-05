@@ -32,7 +32,7 @@
           <div
             class="col-10 col-sm-8 col-md-6 col-lg-5 col-xl-4 bg-white text-center"
           >
-            <form class="p-5" action="">
+            <form class="p-5" id="login-form">
               <h4 class="text-center h4">Iniciar Sesi&oacute;n</h4>
               <div class="form-group row">
                 <label for="Correo" class="col-2 col-sm-2 col-form-label"
@@ -42,8 +42,7 @@
                   <input
                     class="form-control"
                     type="text"
-                    name="Correo"
-                    id="correo"
+                    id="username"
                     placeholder="Nombre de Usuario"
                     required
                   />
@@ -57,20 +56,16 @@
                   <input
                     class="form-control"
                     type="password"
-                    name="Password"
-                    id="Password"
+                    id="password"
                     placeholder="Contrase&ntilde;a"
                     required
                   />
                 </div>
               </div>
 
-              <input
-                class="btn btn-primary w-100 "
-                style="background-color: #084d68;"
-                type="submit"
-                value="Ingresar"
-              />
+              <button class="btn button-primary btn-block" type="submit">
+                Ingresar
+              </button>
             </form>
             <p>¿No tienes cuenta? <a href="register.html">Registrate</a></p>
           </div>
