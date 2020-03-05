@@ -1,5 +1,5 @@
-<?
-    function get_connection() {
+<?php
+    function conectar() {
         $user = "db_user";
         $password = "user_password";
     

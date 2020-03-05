@@ -9,17 +9,14 @@
 
     <link rel="stylesheet" href="../../assets/css/line-awesome.min.css" />
     <link rel="stylesheet" href="../../assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../../assets/css/index.css?cb=<?= time()?>" />
+    <link rel="stylesheet" href="../../assets/css/index.css " />
   </head>
   <body class="d-flex flex-column">
-    <header
-      class="header d-flex justify-content-center align-items-center container"
-    >
+    <header class="header d-flex justify-content-center align-items-center">
       <div
-        class="header__container d-flex justify-content-between align-items-center"
+        class="header__container d-flex justify-content-between align-items-center container"
       >
-
-        <a href="../../pages/home.html">
+        <a href="/">
           <img
             class="logo"
             src="../../assets/img/logo.png"
@@ -29,35 +26,55 @@
       </div>
     </header>
 
-    <main >
+    <main>
       <div class="container">
         <div class="row justify-content-center align-items-center mt-5 ">
-          <div class="col-10 col-sm-8 col-md-6 col-lg-5 col-xl-4 bg-white text-center">
+          <div
+            class="col-10 col-sm-8 col-md-6 col-lg-5 col-xl-4 bg-white text-center"
+          >
             <form class="p-5" action="">
               <h4 class="text-center h4">Iniciar Sesi&oacute;n</h4>
               <div class="form-group row">
-                <label for="Correo" class="col-2 col-sm-2 col-form-label"><i class="lar la-user la-2x"></i></label>
+                <label for="Correo" class="col-2 col-sm-2 col-form-label"
+                  ><i class="lar la-user la-2x"></i
+                ></label>
                 <div class="col-10 col-sm-10">
-                  <input class="form-control" type="text" name="Correo" id="correo" placeholder="Nombre de Usuario" required>
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="Correo"
+                    id="correo"
+                    placeholder="Nombre de Usuario"
+                    required
+                  />
                 </div>
               </div>
               <div class="form-group row ">
-                <label for="Password" class="col-2 col-sm-2 col-form-label"><i class="las la-lock la-2x"></i></label>
+                <label for="Password" class="col-2 col-sm-2 col-form-label"
+                  ><i class="las la-lock la-2x"></i
+                ></label>
                 <div class="col-10 col-sm-10">
-                  <input class="form-control"  type="password" name="Password" id="Password" placeholder="Contrase&ntilde;a" required>
+                  <input
+                    class="form-control"
+                    type="password"
+                    name="Password"
+                    id="Password"
+                    placeholder="Contrase&ntilde;a"
+                    required
+                  />
                 </div>
               </div>
-                
-                <input class="btn btn-primary w-100 " style="background-color: #084d68;" type="submit" value="Ingresar">
-              
-              
-              
+
+              <input
+                class="btn btn-primary w-100 "
+                style="background-color: #084d68;"
+                type="submit"
+                value="Ingresar"
+              />
             </form>
-            <p class="">¿No tienes cuenta? <a href="">Registrate</a></p>
+            <p>¿No tienes cuenta? <a href="register.html">Registrate</a></p>
           </div>
-          
-       </div>
-      
+        </div>
       </div>
     </main>
 
@@ -71,6 +88,5 @@
 
     <script src="../../assets/js/helpers.js"></script>
     <script src="../../assets/js/login.js"></script>
-
   </body>
 </html>

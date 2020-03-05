@@ -8,14 +8,14 @@
     </title>
     <link rel="stylesheet" href="../assets/css/line-awesome.min.css" />
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../assets/css/index.css?cb=<?= time()?>" />
+    <link rel="stylesheet" href="../assets/css/index.css" />
   </head>
   <body class="d-flex flex-column">
     <header class="header d-flex justify-content-center align-items-center">
       <div
         class="header__container d-flex justify-content-between align-items-center container"
       >
-        <a href="../pages/home.html">
+        <a href="/">
           <img
             class="logo"
             src="../assets/img/logo.png"
@@ -26,13 +26,11 @@
           <span class="text-white mr-3 d-none">
             Bienvenido, <span id="username"></span>
           </span>
-          <a class="text-white mr-3" href="../pages/auth/register.html">
+          <a class="text-white mr-3" href="auth/register.html">
             Crear cuenta
           </a>
-          <a class="text-white mr-3" href="../pages/auth/login.html"
-            >Ingresar</a
-          >
-          <a href="../pages/client/my_cart.html">
+          <a class="text-white mr-3" href="auth/login.html">Ingresar</a>
+          <a href="client/my_cart.html">
             <i class="text-white la la-shopping-cart la-lg"></i>
             <span class="badge badge-danger d-none">
               2
