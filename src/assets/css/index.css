@@ -104,6 +104,10 @@ body {
   color: #ffffff;
 }
 
+.text-warn {
+  color: #d8422c;
+}
+
 .button-primary {
   background-color: var(--primary);
   color: #ffff;
@@ -176,4 +180,7 @@ body {
   100% {
     transform: rotate(360deg);
   }
+}
+.input-amount {
+  width: 100px;
 }
